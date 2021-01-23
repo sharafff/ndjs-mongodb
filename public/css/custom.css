@@ -1,0 +1,63 @@
+*{ 
+padding:0 ; 
+margin:0; 
+font-family: "Poppins", sans-serif;
+box-sizing: border-box;
+
+}
+#lgo{
+    font-family: 'Hachi Maru Pop', cursive;
+}
+.shadow{
+    box-shadow: 0 20px 20px rgb(0,0,0,0.3), 0px 0px 30px rgb(0,0,0,0.3);
+}
+.wrapper {
+    padding-top: 50px;
+    min-height: 100vh;
+    }
+    .card-img-top {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    }
+    .card-body{
+        text-align: center;
+        box-shadow: 0 20px 20px rgb(0,0,0,0.3), 0px 0px 30px rgb(0,0,0,0.3)
+    }
+    .card-body h6 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: deeppink;
+    }
+    .card-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    }
+    
+    .socials a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 5px;
+    }
+    .socials a i {
+    color: #fff;
+    padding: 12px 0;
+    }    
+    
+    .socials a:nth-child(1) {
+    background: #3b5998;
+    }.socials a:nth-child(2) {
+    background: #ff0000;
+    }.socials a:nth-child(3) {
+    background: #007bb5;
+    }.socials a:nth-child(4) {
+    background: #ea4c89;
+    }
+    
+    @media (max-width: 800px){
+        .mx-30{
+            margin-bottom: 30px;
+        }
+    }
+    
