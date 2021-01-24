@@ -4,16 +4,35 @@ const Event = require('../models/Event')
 
 //router.set('view engine', 'ejs'); 
 router.get('/', (req,res)=>{
-    Event.find({title:"hello"}, (err,events)=>{
-        res.json(events)
+    Event.find({}, (err,events)=>{
+    let chunk =[]
+    let chunkSize = 3 
+
+    for(let i = 0 ; i<events.length; i+=chunkSize){
+        chunk.push(events.slice(i,chunkSize+i))
+    }
+    res.render('event/index', {
+        chunk : chunk,
+
     })
-    //res.render('event/index')
+    //res.json(chunk)
+    })
 })
-router.get('/:event', (req,res)=>{
-    res.render('event/show')
+router.get('/events/:id', (req,res)=>{
+    //console.log(req.params.id)
+    Event.findOne({_id: req.params.id},(err,event)=>{
+        console.log(event)
+        res.render('event/show',{
+            event : event,
+        })
+    })
+    
 })
-router.get('/login', (req,res)=>{
+router.get('/users/login', (req,res)=>{
     res.render('event/login')
+})
+router.get('/create', (req,res)=>{
+    res.render('event/create')
 })
 
 

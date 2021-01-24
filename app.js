@@ -18,5 +18,5 @@ const events= require('./routes/events')
 app.use('/', events)
 
 app.listen(3000, ()=> {  
-    
+    console.log("success")
 });
