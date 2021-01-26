@@ -3,10 +3,13 @@
 <%-include('../partials/navbar.ejs')-%>
 <br>
 <div class="container">
-
+    <br>
+    <%-include('../partials/flash.ejs')-%>
     <div class="col-md-6 offset-md-3">
         <div class="card mx-30">
         <img src="https://i.postimg.cc/WzjcC7Hb/1.jpg" class="card-img-top" alt="..."> 
+
+        
         <div class="card-body">
             <h5 class="card-title"><%=event.name%></h5>
             
@@ -16,8 +19,8 @@
             </p>
             <p><span class="badge badge-secondary"><%=event.creation.toDateString()%></span></p>
             <div>
-                <button type="button" class="btn btn-outline-dark">edit</button>
-                <button type="button" class="btn btn-outline-danger">delete</button>
+                <a href="<%='/edit/'+ event.id %>" class="btn btn-outline-dark">edit</a>
+                <a href="/update" class="btn btn-outline-danger">delete</a>
             </div>
             <!-- <div class="socials">
                 <a href="#"><i class="fa fa-facebook"></i></a>

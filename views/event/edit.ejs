@@ -2,7 +2,53 @@
 
 <%-include('../partials/navbar.ejs')-%>
 <br>
+<div class="container ">
+    <div class="row mt-2">
+        <div class="col-md-8 ">
+            <h6 class="display-4">Edit <%=event.name%>'s Event:</h6>
+            <hr>
+            <% if (locals.errors) {%>
+                <% errors.forEach((err)=> {%>
+                    <div class="alert alert-danger">
+                            <%= err.msg%>
+                    </div>
+                <%})%>
+            <%}%>
+            
 
-<p>Edit</p>
+              
+            <form  action="/update" method="post">
+                <div class="form-group">
+                    <label for="name">Edit Full Name</label>
+                    <input type="text" name="name" id="name" class="form-control">
+                </div>
+                <input type="hidden" name="id" value="<%=event.id%>">
+                <div class="form-group">
+                    <label for="post">Edit Job position</label>
+                    <input type="text" name="post" id="post" class="form-control" >
+                </div>
+
+
+                <div class="form-group">
+                        <label for="description">Edit Description</label>
+                       <textarea name="description" rows="4" class="form-control"></textarea>
+                    </div>
+
+                    
+
+                        <div class="form-group">
+                                <label for="date">Edit Date</label>
+                                <input type="date" name="date" id="date" class="form-control">
+                            </div>
+
+                    <br>
+        
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-secondary">Update</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <%-include('../partials/footer.ejs')-%>

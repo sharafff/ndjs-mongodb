@@ -18,6 +18,10 @@ const eventSchema = new mongoose.Schema({
         required:true,
         default: Date,
     },
+    picture:{
+        type:String,
+        default:"https://i.postimg.cc/WzjcC7Hb/1.jpg",
+    }
     
 })
 

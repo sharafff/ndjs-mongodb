@@ -7,6 +7,7 @@ box-sizing: border-box;
 }
 #lgo{
     font-family: 'Hachi Maru Pop', cursive;
+    
 }
 .shadow{
     box-shadow: 0 20px 20px rgb(0,0,0,0.3), 0px 0px 30px rgb(0,0,0,0.3);
@@ -94,7 +95,8 @@ box-sizing: border-box;
     min-height: 670px;
     position: relative;
     background: url(https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80) no-repeat center;
-    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19)
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(184, 70, 70, 0.19);
+   
 }
 
 .login-snip {
@@ -290,4 +292,27 @@ a {
 }
 .loginmarg{
     margin-top: 50px;
+}
+
+/* rounded img */
+.title_nd_img{
+    display:flex ; 
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+
+.img_rounded{
+    width:100px ; 
+    height: 100px ;
+    border-radius: 50%;
+    background:grey; 
+}
+.div-card{
+    width: 60px ; 
+    height: 50px;
+    background-position: 70%;
+
 }

@@ -18,6 +18,8 @@ install bootstrap
 
 ```
 npm install bootstrap 
+npm install express-session
+npm install express-session
 ```
 
 Docker build image : 
