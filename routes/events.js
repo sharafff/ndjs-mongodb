@@ -177,6 +177,17 @@ router.post('/update',[
     }
    
 })
-
+//delete event
+router.delete('/events/delete/:id',(req,res)=>{
+ 
+    let query={_id:req.params.id}
+    Event.deleteOne(query,(err)=>{
+        if(!err){
+            res.status(200).json('deleted')
+        } else{
+            res.status(404).json('Error not deleted ')
+        }
+    })
+})
 
 module.exports =router

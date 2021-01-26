@@ -20,7 +20,7 @@
             <p><span class="badge badge-secondary"><%=event.creation.toDateString()%></span></p>
             <div>
                 <a href="<%='/edit/'+ event.id %>" class="btn btn-outline-dark">edit</a>
-                <a href="/update" class="btn btn-outline-danger">delete</a>
+                <button class="btn btn-outline-danger" onclick="deleteEvent()" id= "deleteBtn" data-id = <%=event.id%>  >delete</button>
             </div>
             <!-- <div class="socials">
                 <a href="#"><i class="fa fa-facebook"></i></a>
